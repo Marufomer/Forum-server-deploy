@@ -8,7 +8,7 @@ import answerRouter from './routers/answerRouter.js';
 dotenv.config();
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors())
 app.use(express.urlencoded({extended:true}));
