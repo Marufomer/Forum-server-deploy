@@ -28,7 +28,7 @@ app.use('/api/answer', answerRouter);
 async function start() {
      try {
         await db.execute("select 'test'");
-        app.listen(port);
+        app.listen(port, "0.0.0.0");
         console.log("database connection established");
         console.log(`listening on ${port}`);
      } catch (error) {
